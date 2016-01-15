@@ -64,7 +64,8 @@ app.post('/collect', function(req, res){
 	//Structure Data
 	var data = {
 		v: 		1,
-		tid: 	env_var.ga_key,
+		// tid: 	env_var.ga_key,
+		tid: 	"UA-72483030-1",
 		cid: 	user.id,
 		ds:  	"slack", //data source
 		cs: 	"slack", // campaign source
@@ -74,7 +75,7 @@ app.post('/collect', function(req, res){
 		cm1: 	wordCount,
 		cm2: 	emojiCount,
 		cm3: 	exclaCount,
-		cm4: 	elipseCount, 
+		cm4: 	elipseCount,
 		cm5: 	questionMark, //need to set up in GA
 		dh:		teamDomain+".slack.com",
 		dp:		"/"+channel.name,
