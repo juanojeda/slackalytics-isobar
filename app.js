@@ -64,14 +64,13 @@ app.post('/collect', function(req, res){
 	//Structure Data
 	var data = {
 		v: 		1,
-		// tid: 	env_var.ga_key,
 		tid: 	env_var.ga_key,
 		cid: 	user.id,
 		ds:  	"slack", //data source
 		cs: 	"slack", // campaign source
 		cd1: 	user.id,
 		cd2: 	channel.name,
-		cd3: 	msgText,
+		cd3: 	channel.id,
 		cm1: 	wordCount,
 		cm2: 	emojiCount,
 		cm3: 	exclaCount,
@@ -81,7 +80,7 @@ app.post('/collect', function(req, res){
 		dp:		"/"+channel.name,
 		dt:		"Slack Channel: "+channel.name,
 		t: 		"event",
-		ec: 	"slack: "+ channel.name + "|" + channel.id,
+		ec: 	"#"+ channel.name,
 		ea: 	"post by " + user.id,
 		el: 	msgText,
 		ev: 	1
