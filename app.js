@@ -71,6 +71,7 @@ app.post('/collect', function(req, res){
 		cd1: 	user.id,
 		cd2: 	channel.name,
 		cd3: 	channel.id,
+		cd4:	user.name,
 		cm1: 	wordCount,
 		cm2: 	emojiCount,
 		cm3: 	exclaCount,
