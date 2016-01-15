@@ -65,7 +65,7 @@ app.post('/collect', function(req, res){
 	var data = {
 		v: 		1,
 		// tid: 	env_var.ga_key,
-		tid: 	"UA-72483030-1",
+		tid: 	env_var.ga_key,
 		cid: 	user.id,
 		ds:  	"slack", //data source
 		cs: 	"slack", // campaign source
